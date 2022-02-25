@@ -1,0 +1,109 @@
+//crete array of the month 
+
+//1.display all months
+
+//2.display month in ascending and descending order
+
+//3.create duplicate array
+
+//4.display july month is prsent in array or not
+
+//5.display any five months from array.
+
+using System;
+
+namespace arrayExample
+
+{
+
+    class Program
+
+    {
+
+        static void Main(string[] args)
+
+        {
+
+            string[] montharr = { "January","February","March","April","May","June","July","August","September","October","November","December" };
+
+            foreach(string str in montharr)
+
+            {
+
+                Console.WriteLine(str);
+
+            }
+
+            Array.Sort(montharr);
+
+            Console.WriteLine("After sorting in Ascending");
+
+            foreach (string str in montharr)
+
+            {
+
+                Console.WriteLine(str);
+
+            }
+
+            Array.Reverse(montharr);
+
+            Console.WriteLine("After sorting in Descending");
+
+            foreach (string str in montharr)
+
+            {
+
+                Console.WriteLine(str);
+
+            }
+
+            string[] newArr=new string[12];
+
+            Array.Copy(montharr, newArr, 12);
+
+            Console.WriteLine("After Copy in newArr");
+
+            foreach (string str in newArr)
+
+            {
+
+                Console.WriteLine(str);
+
+            }
+
+            Console.WriteLine("July is present or not");
+
+            foreach (string str in montharr)
+
+            {
+
+                if (str == "July")
+
+                {
+
+                    Console.WriteLine("July is present");
+
+                    break;
+
+                }
+
+            }
+
+            Console.WriteLine("5 months from array");
+
+            for (int i = 0; i < 6; i++)
+
+            {
+
+                Console.WriteLine(montharr[i]);
+
+            }
+
+            Console.ReadKey();
+
+        }
+
+    }
+
+}
